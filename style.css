@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.weather-card {
+  background: #4460f1;
+  border-radius: 25px;
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+
+.weather-icon {
+  margin: 20px 0 -15px;
+}
+
+.weather-icon img {
+  width: 140px;
+  height: 140px;
+}
+
+.temperature {
+  font-size: 7em;
+  margin: 0 0 15px;
+  line-height: 1;
+}
+
+.description {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.city {
+  font-size: 1.2em;
+  margin-top: 15px;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.city::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M12 0C7.802 0 4 3.403 4 7.602C4 11.8 7.469 16.812 12 24C16.531 16.812 20 11.8 20 7.602C20 3.403 16.199 0 12 0ZM12 11C10.343 11 9 9.657 9 8C9 6.343 10.343 5 12 5C13.657 5 15 6.343 15 8C15 9.657 13.657 11 12 11Z"/></svg>')
+    center/contain;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 5px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.detail-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.detail-content {
+  text-align: center;
+}
+
+.detail-value {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.detail-label {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.last-update {
+  font-size: 0.85em;
+  margin-top: 20px;
+  opacity: 0.7;
+}
