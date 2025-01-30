@@ -11,7 +11,9 @@ async function loadConfig() {
 // Met à jour l'affichage avec les données météo
 function updateDisplay(data) {
   // Mise à jour des textes
-  document.querySelector(".city").textContent = "Laval";
+  // On extrait juste le nom de la ville (avant la virgule)
+  const cityName = config.city.split(",")[0];
+  document.querySelector(".city").textContent = cityName;
   document.querySelector(".temperature").textContent = `${Math.round(
     data.main.temp
   )}°`;
